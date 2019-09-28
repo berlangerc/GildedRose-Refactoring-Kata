@@ -7,6 +7,7 @@ describe('Decreasing quality', function () {
         const items = [
             { item: new Item('foo', 0, 2), expectedQuality: 0 },
             { item: new Item('foo', -1, 2), expectedQuality: 0 },
+            { item: new Item('foo', -1, 0), expectedQuality: 0 }
         ];
         items.forEach(({ item, expectedQuality }) => {
             describe(`When the quality is updated for item ${item.name} with quality ${item.quality} and sellIn ${item.sellIn}`, () => {
