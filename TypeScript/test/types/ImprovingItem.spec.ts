@@ -43,4 +43,25 @@ describe('Improving Item', function () {
             });
         });
     });
+
+    describe('Updating quality never passes 50', () => {
+
+        const items = [
+            { item: new ImprovingItem("decrease1", 0, 49), expectedQuality: 50 },
+            { item: new ImprovingItem("decrease2", 0, 50), expectedQuality: 50 },
+            { item: new ImprovingItem("decrease3", 1, 49), expectedQuality: 50 },
+            { item: new ImprovingItem("decrease4", 1, 50), expectedQuality: 50 }
+        ];
+
+        items.forEach(({ item, expectedQuality }) => {
+            describe(`When the quality is updated for an improving item ${item.name} with quality ${item.quality} and sellIn ${item.sellIn}`, () => {
+                item.update();
+
+                it(`The quality is ${expectedQuality} and does not exceed 50`, function () {
+                    expect(item.quality).to.equal(expectedQuality);
+                });
+
+            });
+        });
+    });
 });
