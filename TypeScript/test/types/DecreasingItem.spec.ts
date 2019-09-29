@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import DecreasingItem from '../../app/types/DecresingItem';
+import DecreasingItem from '../../app/types/DecreasingItem';
 
 describe('Decreasing Item', function () {
 
@@ -7,7 +7,7 @@ describe('Decreasing Item', function () {
 
         const items = [
             { item: new DecreasingItem("decrease1", 1, 1), expectedQuality: 0 },
-            { item: new DecreasingItem("decrease1", 50, 10), expectedQuality: 9 }
+            { item: new DecreasingItem("decrease2", 50, 10), expectedQuality: 9 }
         ];
 
         items.forEach(({ item, expectedQuality }) => {
@@ -24,7 +24,7 @@ describe('Decreasing Item', function () {
 
         const items = [
             { item: new DecreasingItem("decrease1", 0, 2), expectedQuality: 0 },
-            { item: new DecreasingItem("decrease1", -10, 10), expectedQuality: 8 }
+            { item: new DecreasingItem("decrease2", -10, 10), expectedQuality: 8 }
         ];
 
         items.forEach(({ item, expectedQuality }) => {
