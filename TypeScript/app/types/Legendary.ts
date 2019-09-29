@@ -1,5 +1,5 @@
 import { BaseItem } from "./BaseItem";
 
-export default class StableItem extends BaseItem {
+export default class Legendary extends BaseItem {
     processUpdate() { }
 }
