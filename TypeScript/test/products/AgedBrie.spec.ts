@@ -22,6 +22,7 @@ describe('Aged Brie', function () {
             expect(items[1].quality).to.equal(12);
         });
     });
+
     describe('When the quality needs increasing but reaches 50', () => {
         it(`The Quality increases but doesn't go over 50`, function () {
             const gildedRose = new GildedRose([

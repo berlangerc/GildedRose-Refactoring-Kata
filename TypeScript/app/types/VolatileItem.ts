@@ -11,5 +11,4 @@ export abstract class VolatileItem extends BaseItem {
             this.quality--;
         }
     }
-    abstract update(): void;
 }

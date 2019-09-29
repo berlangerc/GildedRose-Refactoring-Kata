@@ -12,7 +12,7 @@ describe('Decreasing Item', function () {
 
         items.forEach(({ item, expectedQuality, expectedSellIn }) => {
             describe(`When the quality is updated for item ${item.name} with quality ${item.quality} and sellIn ${item.sellIn}`, () => {
-                item.update();
+                item.processUpdate();
                 it(`The quality is decreased with 1 and equals to ${expectedQuality}`, function () {
                     expect(item.quality).to.equal(expectedQuality);
                 });
@@ -32,7 +32,7 @@ describe('Decreasing Item', function () {
 
         items.forEach(({ item, expectedQuality, expectedSellIn }) => {
             describe(`When the quality is updated for item ${item.name} with quality ${item.quality} and sellIn ${item.sellIn}`, () => {
-                item.update();
+                item.processUpdate();
 
                 it(`The quality is decreased with 2 and equals to ${expectedQuality}`, function () {
                     expect(item.quality).to.equal(expectedQuality);
@@ -55,7 +55,7 @@ describe('Decreasing Item', function () {
 
         items.forEach(({ item, expectedQuality }) => {
             describe(`When the quality is updated for item ${item.name} with quality ${item.quality} and sellIn ${item.sellIn}`, () => {
-                item.update();
+                item.processUpdate();
 
                 it(`The quality is ${expectedQuality} and does not exceed 0`, function () {
                     expect(item.quality).to.equal(expectedQuality);

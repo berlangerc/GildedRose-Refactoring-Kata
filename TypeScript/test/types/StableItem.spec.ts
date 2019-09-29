@@ -5,7 +5,7 @@ describe('StableItem', function () {
         it(`The SellIn is the same`, function () {
             const item = new StableItem('stable item', 4, 80)
 
-            item.update();
+            item.processUpdate();
             expect(item.sellIn).to.equal(4);
         });
     });
@@ -14,7 +14,7 @@ describe('StableItem', function () {
         it(`The Quality is the same`, function () {
             const item = new StableItem('stable item', 4, 80)
 
-            item.update();
+            item.processUpdate();
             expect(item.quality).to.equal(80);
         });
     });

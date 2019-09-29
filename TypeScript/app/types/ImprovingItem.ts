@@ -1,7 +1,7 @@
 import { VolatileItem } from "./VolatileItem";
 
 export default class ImprovingItem extends VolatileItem {
-    update() {
+    processUpdate() {
         this.sellIn--;
         this.increaseQuality();
 
