@@ -49,8 +49,8 @@ describe('Decreasing Item', function () {
         const items = [
             { item: new DecreasingItem("decrease1", 0, 1), expectedQuality: 0 },
             { item: new DecreasingItem("decrease2", 1, 1), expectedQuality: 0 },
-            { item: new DecreasingItem("decrease2", 0, 0), expectedQuality: 0 },
-            { item: new DecreasingItem("decrease2", 1, 0), expectedQuality: 0 }
+            { item: new DecreasingItem("decrease3", 0, 0), expectedQuality: 0 },
+            { item: new DecreasingItem("decrease4", 1, 0), expectedQuality: 0 }
         ];
 
         items.forEach(({ item, expectedQuality }) => {
