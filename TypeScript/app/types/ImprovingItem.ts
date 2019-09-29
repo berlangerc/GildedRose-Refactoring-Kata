@@ -1,12 +1,12 @@
-import { BaseItem } from "./BaseItem";
+import { VolatileItem } from "./VolatileItem";
 
-export default class ImprovingItem extends BaseItem {
+export default class ImprovingItem extends VolatileItem {
     update() {
         this.sellIn--;
-        this.quality++;
+        this.increaseQuality();
 
         if (this.sellIn < 0) {
-            this.quality++;
+            this.increaseQuality();
         }
     }
 
