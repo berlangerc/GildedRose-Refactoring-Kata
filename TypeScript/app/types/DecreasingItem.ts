@@ -5,7 +5,7 @@ export default class DecreasingItem extends VolatileItem {
         this.sellIn--;
         this.decreaseQuality();
 
-        if (this.sellIn < 0) {
+        if (this.isSellInPassed()) {
             this.decreaseQuality();
         }
     }

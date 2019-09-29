@@ -5,7 +5,7 @@ export default class ImprovingItem extends VolatileItem {
         this.sellIn--;
         this.increaseQuality();
 
-        if (this.sellIn < 0) {
+        if (this.isSellInPassed()) {
             this.increaseQuality();
         }
     }
