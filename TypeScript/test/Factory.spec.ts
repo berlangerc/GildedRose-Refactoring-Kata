@@ -5,6 +5,7 @@ import BackStage from '../app/types/BackStage';
 import Legendary from '../app/types/Legendary';
 import DecreasingItem from '../app/types/DecreasingItem';
 import ItemFactory from '../app/Factory';
+import Conjured from '../app/types/Conjured';
 
 describe('Factory', function () {
 
@@ -13,7 +14,8 @@ describe('Factory', function () {
             { item: new Item('Backstage passes to a TAFKAL80ETC concert', 0, 2), type: BackStage },
             { item: new Item('Aged Brie', -1, 2), type: ImprovingItem },
             { item: new Item('Sulfuras, Hand of Ragnaros', -1, 2), type: Legendary },
-            { item: new Item('foo', -1, 2), type: DecreasingItem }
+            { item: new Item('foo', -1, 2), type: DecreasingItem },
+            { item: new Item('Conjured', -1, 2), type: Conjured },
         ];
 
         items.forEach(({ item, type }) => {
