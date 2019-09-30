@@ -1,8 +1,7 @@
 import ImprovingItem from "./ImprovingItem";
 
 export default class BackStage extends ImprovingItem {
-    processUpdate() {
-        this.sellIn--;
+    updateQuality() {
         this.increaseQuality();
 
         if (this.sellIn < 10) {
@@ -12,6 +11,7 @@ export default class BackStage extends ImprovingItem {
         if (this.sellIn < 5) {
             this.increaseQuality();
         }
+
         if (this.sellIn < 0) {
             this.quality = 0;
         }

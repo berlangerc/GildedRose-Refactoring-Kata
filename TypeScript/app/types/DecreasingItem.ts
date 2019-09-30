@@ -1,8 +1,7 @@
 import VolatileItem from "./VolatileItem";
 
 export default class DecreasingItem extends VolatileItem {
-    processUpdate() {
-        this.sellIn--;
+    updateQuality() {
         this.decreaseQuality();
 
         if (this.isSellInPassed()) {
