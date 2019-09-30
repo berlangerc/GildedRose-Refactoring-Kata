@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { Item, GildedRose } from '../app/gilded-rose';
+import { Item } from '../app/gilded-rose';
 import ImprovingItem from '../app/types/ImprovingItem';
 import BackStage from '../app/types/BackStage';
 import Legendary from '../app/types/Legendary';
@@ -20,7 +20,6 @@ describe('Factory', function () {
             describe(`When the name is ${item.name}`, () => {
                 it(`Then the factory creates an item with type ${type}`, function () {
                     const createdItem = ItemFactory.makeItem(item);
-                    console.log(item);
                     expect(createdItem instanceof type).to.be.true;
                 });
             });

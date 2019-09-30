@@ -1,4 +1,4 @@
-import { VolatileItem } from "./VolatileItem";
+import VolatileItem from "./VolatileItem";
 
 export default class ImprovingItem extends VolatileItem {
     processUpdate() {

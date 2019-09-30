@@ -1,6 +1,6 @@
-import { BaseItem } from "./BaseItem";
+import BaseItem from "./BaseItem";
 
-export abstract class VolatileItem extends BaseItem {
+export default abstract class VolatileItem extends BaseItem {
     static QUALITY_MAX = 50;
     static QUALITY_MIN = 0;
 

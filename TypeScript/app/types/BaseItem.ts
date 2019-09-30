@@ -1,5 +1,5 @@
-import { Item } from "../gilded-rose";
+import Item from "./Item";
 
-export abstract class BaseItem extends Item {
+export default abstract class BaseItem extends Item {
     abstract processUpdate(): void;
 }
